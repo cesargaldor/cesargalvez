@@ -14,7 +14,15 @@ module.exports = {
       black: "#000",
       white: "#fff",
       transparent: "transparent",
-
+      blue: {
+        default: "#74b9ff",
+        dark: "#0984e3"
+      },
+      gray: {
+        gray1: "#c8d6e5",
+        gray2: "#8395a7",
+        gray3: "#56616d"
+      },
       background: {
         primary: "var(--bg-background-primary)",
         secondary: "var(--bg-background-secondary)",
@@ -24,6 +32,7 @@ module.exports = {
       copy: {
         primary: "var(--text-copy-primary)",
         secondary: "var(--text-copy-secondary)",
+        terciary: "var(--text-copy-terciary)",
         modal: "var(--text-copy-modal)"
       }
     }

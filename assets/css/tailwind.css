@@ -4,21 +4,22 @@
 
 .theme-light {
   --bg-background-primary: #fff;
-  --bg-background-secondary: #a8ffe4;
+  --bg-background-secondary: rgba(240, 238, 238, 0.788);
 
   --text-copy-primary: #000;
-  --text-copy-secondary: #919399;
-  --text-copy-modal: #a8ffe4;
+  --text-copy-secondary: #404042;
+  --text-copy-terciary: #a1a3a8;
+  --text-copy-modal: #54a0ff;
 }
 
 .theme-dark {
   --bg-background-primary: #161b25;
   --bg-background-secondary: #242c3b;
-  --bg-background-modal: #a8ffe4;
 
   --text-copy-primary: #fff;
-  --text-copy-secondary: #a7a9af;
-  --text-copy-modal: #a8ffe4;
+  --text-copy-secondary: #bdbfc5;
+  --text-copy-terciary: #c5c7ce;
+  --text-copy-modal: #ffeaa7;
 }
 
 .page-enter-active,

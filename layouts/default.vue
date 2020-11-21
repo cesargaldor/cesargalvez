@@ -1,12 +1,16 @@
 <template>
   <div
-    class="w-full px-40 bg-background-primary text-copy-primary"
+    class="w-full sm:px-5 lg:px-48 bg-background-primary text-copy-primary transicion"
     :class="theme"
   >
     <div>
-      <nav class="flex items-center justify-between py-6">
+      <nav class="flex items-center justify-between py-10">
         <div>
-          <nuxt-link to="/">cesar.galvez</nuxt-link>
+          <nuxt-link to="/" class="font-semibold"
+            >cesar.<span class="text-copy-modal font-semibold"
+              >galvez</span
+            ></nuxt-link
+          >
         </div>
         <div class="flex items-center">
           <div class="nav-items">
@@ -24,7 +28,7 @@
 
 <script>
 export default {
-  name: "Default Layout",
+  name: "DefaultLayout",
   data() {
     return {
       theme: "theme-light"
@@ -48,6 +52,17 @@ export default {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+}
+
+*::selection {
+  color: #fff;
+  background: var(--text-copy-modal);
+}
+
+.transicion {
+  transition: all 0.2s ease-in;
 }
 
 ::-webkit-scrollbar {
