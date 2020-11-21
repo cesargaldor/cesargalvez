@@ -1,9 +1,8 @@
 <template>
   <div>
     <div><Header /></div>
-    <div class="mt-5">
-      <Icons />
-    </div>
+    <div><About /></div>
+    <div><Projects /></div>
   </div>
 </template>
 

@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <div class="sm:mt-4 lg:mt-12 sm:mb-12 lg:mb-32">
     <picture>
       <img
-        class="w-32 rounded-full"
+        class="sm:w-24 lg:w-32 rounded-full"
         src="@/assets/img/meuser.jpg"
         alt="profile-photo"
       />
@@ -17,6 +17,9 @@
       Desarrollador frontend al que le encanta montar en moto. Bienvenido a mi
       rincón en internet.
     </p>
+    <div class="mt-5">
+      <Icons />
+    </div>
   </div>
 </template>
 

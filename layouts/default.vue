@@ -1,6 +1,6 @@
 <template>
   <div
-    class="w-full sm:px-5 lg:px-48 bg-background-primary text-copy-primary transicion"
+    class="w-full sm:px-5 lg:px-56 bg-background-primary text-copy-primary transicion pb-20"
     :class="theme"
   >
     <div>
