@@ -1,8 +1,8 @@
 <template>
-  <div class="sm:mt-4 lg:mt-12 sm:mb-12 lg:mb-32">
+  <div class="sm:mt-4 lg:mt-8 sm:mb-12 lg:mb-32">
     <picture>
       <img
-        class="sm:w-24 lg:w-32 rounded-full"
+        class="sm:w-24 lg:w-40 xl:w-48 rounded-full"
         src="@/assets/img/meuser.jpg"
         alt="profile-photo"
       />

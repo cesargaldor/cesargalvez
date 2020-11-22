@@ -1,6 +1,6 @@
 <template>
   <div
-    class="w-full sm:px-5 lg:px-56 bg-background-primary text-copy-primary transicion pb-20"
+    class="contenedor sm:w-full lg:w-full xl:w-full sm:px-5 lg:px-56 bg-background-primary text-copy-primary transicion"
     :class="theme"
   >
     <div>
@@ -23,6 +23,9 @@
       </nav>
     </div>
     <Nuxt />
+    <div class="py-16">
+      <Foot />
+    </div>
   </div>
 </template>
 
@@ -59,6 +62,21 @@ export default {
 *::selection {
   color: #fff;
   background: var(--text-copy-modal);
+}
+
+@media (min-width: 1920px) {
+  .contenedor {
+    padding-left: 25rem;
+    padding-right: 25rem;
+  }
+}
+
+@media (min-width: 2500px) {
+  .contenedor {
+    padding-left: 45rem;
+    padding-right: 45rem;
+    min-height: 100vh;
+  }
 }
 
 .transicion {
