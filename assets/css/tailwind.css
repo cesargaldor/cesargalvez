@@ -4,12 +4,15 @@
 
 .theme-light {
   --bg-background-primary: #fff;
-  --bg-background-secondary: rgba(240, 238, 238, 0.788);
+  --bg-background-secondary: #f5f6fa;
 
   --text-copy-primary: #000;
   --text-copy-secondary: #404042;
   --text-copy-terciary: #a1a3a8;
   --text-copy-modal: #54a0ff;
+  --text-copy-code: #f0f6ff;
+  --text-copy-input: #a1a7adc0;
+  --text-copy-blog: #262f3d;
 }
 
 .theme-dark {
@@ -17,9 +20,12 @@
   --bg-background-secondary: #242c3b;
 
   --text-copy-primary: #fff;
-  --text-copy-secondary: #d6d8dd;
+  --text-copy-secondary: #c4c6ca;
   --text-copy-terciary: #c5c7ce;
   --text-copy-modal: #ffeaa7;
+  --text-copy-code: #947309;
+  --text-copy-input: #62759b;
+  --text-copy-blog: #cbd5e0;
 }
 
 .page-enter-active,
@@ -35,7 +41,7 @@
   text-align: justify;
 }
 
-.nuxt-content a {
+/* .nuxt-content a {
   background: linear-gradient(to bottom, #a8ffe4 0%, #a8ffe4 100%);
   background-position: 0 100%;
   background-repeat: repeat-x;
@@ -47,42 +53,142 @@
 .nuxt-content a:hover {
   background-size: 4px 50px;
   color: #fff;
+} */
+
+.nuxt-content a {
+  border-bottom: 2px solid var(--text-copy-modal);
+  color: var(--text-copy-modal);
 }
 
-.nuxt-content h1 {
-  font-size: 2.25rem;
-  font-weight: 800;
-  margin-bottom: 0.3em;
-  margin-top: 0.3em;
+@media (min-width: 350px) {
+  .nuxt-content h1 {
+    font-size: 2.25rem;
+    font-weight: 800;
+    margin-bottom: 0.3em;
+    margin-top: 0.3em;
+  }
+
+  .nuxt-content h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.2em;
+    margin-top: 0.2em;
+  }
+
+  .nuxt-content h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.2em;
+    margin-top: 0.2em;
+  }
+
+  .nuxt-content h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.2em;
+    margin-top: 0.2em;
+    text-align: justify;
+  }
+
+  .nuxt-content p {
+    line-height: 1.6;
+    margin-bottom: 0.75em;
+    margin-top: 1em;
+    font-size: 0.95em;
+    color: var(--text-copy-blog);
+  }
 }
 
-.nuxt-content h2 {
-  font-size: 1.75rem;
-  font-weight: 700;
-  margin-bottom: 0.2em;
-  margin-top: 0.2em;
+@media (min-width: 1280px) {
+  .nuxt-content h1 {
+    font-size: 2.25rem;
+    font-weight: 800;
+    margin-bottom: 0.3em;
+    margin-top: 0.3em;
+  }
+
+  .nuxt-content h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.2em;
+    margin-top: 0.2em;
+  }
+
+  .nuxt-content h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.2em;
+    margin-top: 0.2em;
+  }
+
+  .nuxt-content h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.2em;
+    margin-top: 0.2em;
+    text-align: justify;
+  }
+
+  .nuxt-content p {
+    line-height: 1.6;
+    margin-bottom: 0.75em;
+    margin-top: 1em;
+    font-size: 1em;
+  }
 }
 
-.nuxt-content h3 {
-  font-size: 1.65rem;
-  font-weight: 700;
-  margin-bottom: 0.2em;
-  margin-top: 0.2em;
-}
+/* Estilos para pantalla grande*/
 
-.nuxt-content h4 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 0.2em;
-  margin-top: 0.2em;
-  text-align: justify;
-}
+@media (min-width: 1920px) {
+  .nuxt-content h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 0.3em;
+    margin-top: 0.3em;
+  }
 
-.nuxt-content p {
-  line-height: 1.7;
-  margin-bottom: 0.75em;
-  margin-top: 1em;
-  font-size: 1.2em;
+  .nuxt-content h2 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 0.2em;
+    margin-top: 0.2em;
+  }
+
+  .nuxt-content h3 {
+    font-size: 1.85rem;
+    font-weight: 700;
+    margin-bottom: 0.2em;
+    margin-top: 0.2em;
+  }
+
+  .nuxt-content h4 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.2em;
+    margin-top: 0.2em;
+    text-align: justify;
+  }
+
+  .nuxt-content p {
+    line-height: 1.6;
+    margin-bottom: 0.75em;
+    margin-top: 1em;
+    font-size: 1.2em;
+  }
+
+  .nuxt-content pre code {
+    background-color: transparent;
+    display: inline;
+    line-height: inherit;
+    margin: 0;
+    max-width: auto;
+    overflow: visible;
+    padding: 0;
+    word-wrap: normal;
+    text-shadow: none;
+    color: var(--text-copy-blog);
+    font-size: 0.95rem;
+  }
 }
 
 .nuxt-content-highlight {
@@ -102,7 +208,7 @@ pre[class*="language-"] {
 
 .nuxt-content pre[class*="language-"] {
   box-sizing: border-box;
-  color: #34a8eb;
+  color: var(--text-copy-modal);
   background: var(--bg-background-secondary);
   text-align: left;
   white-space: pre;
@@ -121,13 +227,13 @@ pre[class*="language-"] {
 }
 
 .nuxt-content code {
-  background-color: var(--bg-background-modal);
+  background-color: var(--text-copy-modal);
   border-radius: 3px;
   font-size: 85%;
   margin: 0;
   padding: 0.2em 0.4em;
-  color: #10ac84;
-  font-family: "IBM Plex Mono", monospace;
+  color: var(--text-copy-code);
+  /* font-family: "IBM Plex Mono", monospace; */
 }
 
 .nuxt-content pre code {
@@ -140,34 +246,30 @@ pre[class*="language-"] {
   padding: 0;
   word-wrap: normal;
   text-shadow: none;
-  color: #fff;
+  color: var(--text-copy-blog);
+  font-size: 0.85rem;
 }
 
 .nuxt-content .token.operator {
   background: transparent;
-  font-family: "IBM Plex Mono", monospace;
+  font-family: "Overpass Mono", monospace;
 }
 
 .nuxt-content .token.string {
   color: lightsalmon;
-  font-family: "IBM Plex Mono", monospace;
+  font-family: "Overpass Mono", monospace;
 }
 
 .nuxt-content .token.keyword {
-  color: #0ec1ee;
-  font-family: "IBM Plex Mono", monospace;
+  color: var(--text-copy-modal);
+  font-family: "Overpass Mono", monospace;
 }
 
-.nuxt-content .token.method {
-  color: #dd1d1dea;
-  font-family: "IBM Plex Mono", monospace;
+.nuxt-content .token.method.function.property-access {
+  color: #d84040ea;
+  font-family: "Overpass Mono", monospace;
 }
 
-.nuxt-content .token.maybe {
-  color: #1d50ddea;
-  font-family: "IBM Plex Mono", monospace;
-}
-
-#foot-link:hover {
-  color: var(--text-copy-primary);
+.nuxt-content .token.maybe-class-name {
+  font-family: "Overpass Mono", monospace;
 }

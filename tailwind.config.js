@@ -34,7 +34,8 @@ module.exports = {
         primary: "var(--text-copy-primary)",
         secondary: "var(--text-copy-secondary)",
         terciary: "var(--text-copy-terciary)",
-        modal: "var(--text-copy-modal)"
+        modal: "var(--text-copy-modal)",
+        input: "var(--text-copy-input)"
       }
     }
   },
