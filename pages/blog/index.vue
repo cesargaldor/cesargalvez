@@ -1,32 +1,32 @@
 <template>
-  <div class="container">
-    <h2 class="text-5xl font-bold mb-3">Blog</h2>
-    <p class="text-copy-secondary pr-2">
+  <div class="blog-contenedor">
+    <h2 class="sm:text-4xl lg:text-5xl xl:text-5xl font-bold mb-3">Blog</h2>
+    <p class="text-copy-secondary sm:pr-1 lg:pr-2">
       En este blog quiero ir escribiendo cosas que me gustaría haber sabido
       cuando yo las aprendí. Seguro que hay gente que está en la misma situación
       en la que yo me encontraba y que encuentra útil este contenido.
     </p>
-    <div class="mt-6 mb-16">
-      <input
+    <div class="mt-6 sm:mb-10 lg:mb-12">
+      <!-- <input
         v-model="searchQuery"
         autocomplete="off"
         placeholder="Busca artículos"
         class="w-full px-2 py-3 truncate leading-5 text-sm placeholder-copy-input text-copy-input rounded-md focus:outline-none bg-background-secondary"
-      />
+      /> -->
     </div>
-    <h3 class="text-3xl font-bold mb-2">Todos los posts</h3>
+    <h3 class="sm:text-2xl lg:text-3xl xl:text-3xl font-bold">
+      Todos los posts
+    </h3>
     <nuxt-link
       :to="`/blog/` + article.slug"
       v-for="article in articles"
       :key="article.title"
     >
-      <div class="flex items-center justify-between mb-2 mt-10">
-        <div class="w-11/12">
-          <h4 class="text-xl font-semibold">{{ article.title }}</h4>
-        </div>
-        <div class="w-2/12">{{ article.date }}</div>
-      </div>
-      <p class="text-sm pr-6 text-copy-secondary">{{ article.description }}</p>
+      <Post
+        :title="article.title"
+        :date="article.date"
+        :description="article.description"
+      />
     </nuxt-link>
   </div>
 </template>
@@ -34,6 +34,26 @@
 <script>
 export default {
   name: "Blog",
+  head() {
+    return {
+      title: "Blog - César Gálvez",
+      meta: [
+        // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+        {
+          hid: "description",
+          name: "description",
+          content: `Bienvenido al blog de César Gálvez. En este blog quiero ir escribiendo cosas que me gustaría haber sabido cuando yo las aprendí. Seguro que hay gente que está en la misma situación en la que yo me encontraba y que encuentra útil este contenido.`
+        }
+      ],
+      link: [
+        {
+          href:
+            "https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@400;600&display=swap",
+          rel: "stylesheet"
+        }
+      ]
+    };
+  },
   data() {
     return {
       searchQuery: ""
@@ -58,9 +78,21 @@ export default {
 </script>
 
 <style scoped>
+@media (min-width: 350px) {
+  .blog-contenedor {
+    min-height: 65vh;
+  }
+}
+
+@media (min-width: 1280px) {
+  .blog-contenedor {
+    min-height: 58vh;
+  }
+}
+
 @media (min-width: 1920px) {
-  .container {
-    min-height: 74.2vh;
+  .blog-contenedor {
+    min-height: 71vh;
   }
 }
 </style>

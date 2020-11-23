@@ -23,7 +23,7 @@
       </nav>
     </div>
     <Nuxt />
-    <div class="py-16">
+    <div class="py-20">
       <Foot />
     </div>
   </div>
