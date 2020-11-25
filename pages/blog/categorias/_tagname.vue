@@ -15,8 +15,9 @@
       /> -->
     </div>
     <h3 class="sm:text-2xl lg:text-3xl xl:text-3xl font-bold">
-      Estas son todas las categorías
+      Estos son todos los posts de: {{ tag.name }}
     </h3>
+    <div class="py-1"></div>
     <nuxt-link
       :to="`/blog/` + article.slug"
       v-for="article in articles"
@@ -36,42 +37,23 @@ export default {
   name: "Blog",
   head() {
     return {
-      title: "Blog - César Gálvez",
-      meta: [
-        // hid is used as unique identifier. Do not use `vmid` for it as it will not work
-        {
-          hid: "description",
-          name: "description",
-          content: `Bienvenido al blog de César Gálvez. En este blog quiero ir escribiendo cosas que me gustaría haber sabido cuando yo las aprendí. Seguro que hay gente que está en la misma situación en la que yo me encontraba y que encuentra útil este contenido.`
-        }
-      ],
-      link: [
-        {
-          href:
-            "https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@400;600&display=swap",
-          rel: "stylesheet"
-        }
-      ]
+      title: `Posts de ${this.tag.name} - César Gálvez`
     };
   },
-  data() {
-    return {
-      searchQuery: ""
-      //articles: articles
-    };
-  },
-  async asyncData({ $content, params, $this }) {
-    const articles = await $content("articles", params.slug)
-      .sortBy("createdAt", "desc")
-      .fetch();
 
-    // const tags = await $content('tags', params.slug)
-    //   .only(['name', 'description', 'img', 'slug'])
-    //   .sortBy('createdAt', 'asc')
-    //   .fetch()
+  async asyncData({ $content, params }) {
+    const tags = await $content("tags")
+      .where({ name: { $contains: params.tagname } })
+      .limit(1)
+      .fetch();
+    const tag = tags.length > 0 ? tags[0] : {};
+    const articles = await $content("articles", params.slug)
+      .where({ tags: { $contains: tag.name } })
+      .sortBy("createdAt", "asc")
+      .fetch();
     return {
-      articles
-      //tags
+      articles,
+      tag
     };
   }
 };
@@ -80,7 +62,7 @@ export default {
 <style scoped>
 @media (min-width: 350px) {
   .blog-contenedor {
-    min-height: 65vh;
+    min-height: 67.85vh;
   }
 }
 

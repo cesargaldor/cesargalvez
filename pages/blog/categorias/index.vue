@@ -14,36 +14,29 @@
         class="w-full px-2 py-3 truncate leading-5 text-sm placeholder-copy-input text-copy-input rounded-md focus:outline-none bg-background-secondary"
       /> -->
     </div>
-    <div class="flex items-center justify-between lg:-mb-2">
-      <h3 class="sm:text-2xl lg:text-3xl xl:text-3xl font-bold  sm:mb-0 ">
-        Todos los posts
-      </h3>
-      <nuxt-link
-        class="mt-2 py-1 px-2 bg-background-secondary rounded-md text-sm"
-        to="/blog/categorias"
-        >Categorías</nuxt-link
+    <div>
+      <h3
+        class="sm:text-2xl lg:text-3xl xl:text-3xl font-bold  sm:mb-0 lg:-mb-2"
       >
+        Todas las categorías
+      </h3>
     </div>
-    <nuxt-link
-      :to="`/blog/` + article.slug"
-      v-for="article in articles"
-      :key="article.title"
-    >
-      <Post
-        :title="article.title"
-        :date="article.date"
-        :description="article.description"
-      />
-    </nuxt-link>
+    <ul class="mt-8">
+      <li v-for="tag in tags" :key="tag.name" class="pb-2 text-lg">
+        <nuxt-link :to="`/blog/categorias/` + tag.name">
+          - {{ tag.name }}
+        </nuxt-link>
+      </li>
+    </ul>
   </div>
 </template>
 
 <script>
 export default {
-  name: "Blog",
+  name: "Tags",
   head() {
     return {
-      title: "Blog - César Gálvez"
+      title: "Categorías - César Gálvez"
     };
   },
   data() {
@@ -53,17 +46,13 @@ export default {
     };
   },
   async asyncData({ $content, params }) {
-    const articles = await $content("articles", params.slug)
-      .sortBy("createdAt", "desc")
+    const tags = await $content("tags", params.slug)
+      .only(["name"])
+      .sortBy("createdAt", "asc")
       .fetch();
-
-    // const tags = await $content('tags', params.slug)
-    //   .only(['name', 'description', 'img', 'slug'])
-    //   .sortBy('createdAt', 'asc')
-    //   .fetch()
     return {
-      articles
-      //tags
+      //articles
+      tags
     };
   }
 };

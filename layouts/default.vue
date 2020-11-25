@@ -23,7 +23,7 @@
       </nav>
     </div>
     <Nuxt />
-    <div class="pt-20 pb-6">
+    <div class="pt-20 pb-10">
       <Foot />
     </div>
   </div>
@@ -57,6 +57,7 @@ export default {
   padding: 0;
   font-family: "Inter", sans-serif;
   font-weight: 400;
+  scroll-behavior: smooth;
 }
 
 *::selection {

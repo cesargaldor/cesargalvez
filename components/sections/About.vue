@@ -10,7 +10,6 @@
       <li class="py-1">- Montar en moto.</li>
       <li class="py-1">- Jugar al pádel.</li>
       <li class="py-1">- Escuchar R&B y hacer playlist de Spotify.</li>
-      <li></li>
     </ul>
   </div>
 </template>

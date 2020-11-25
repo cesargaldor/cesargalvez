@@ -8,7 +8,9 @@
       />
     </picture>
     <div class="mb-4 mt-4 text-lg">
-      <h1 class="sm:text-4xl lg:text-6xl font-bold sm:-mb-2 lg:-mb-4">
+      <h1
+        class="sm:text-4xl lg:text-6xl font-bold sm:-mb-2 lg:-mb-4 tracking-tight	"
+      >
         Hola, soy César<span class="text-copy-modal">.</span>
       </h1>
       <span class="text-copy-modal">@cesardev_</span>

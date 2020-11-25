@@ -28,14 +28,14 @@
   --text-copy-blog: #cbd5e0;
 }
 
-.page-enter-active,
+/* .page-enter-active,
 .page-leave-active {
-  transition: opacity 0.2s;
+  transition: opacity 0.1s;
 }
 .page-enter,
 .page-leave-to {
   opacity: 0;
-}
+} */
 
 .nuxt-content {
   text-align: justify;

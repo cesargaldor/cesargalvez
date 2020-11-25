@@ -13,6 +13,16 @@
         <span class=" mr-1">César Galvez / </span>
         <span>{{ article.date }}</span>
       </div>
+      <div>
+        <nuxt-link
+          :to="`/blog/categorias/` + tag"
+          v-for="tag in article.tags"
+          :key="tag"
+          class="tag text-xs sm:ml-2 lg:ml-3 xl:ml-3 uppercase bg-background-secondary rounded-md"
+        >
+          {{ tag }}
+        </nuxt-link>
+      </div>
     </div>
     <article class="pt-12">
       <nuxt-content :document="article" />
@@ -27,11 +37,45 @@ export default {
     return {
       title: this.article.title + " - César Gálvez",
       meta: [
-        // hid is used as unique identifier. Do not use `vmid` for it as it will not work
         {
           hid: "description",
           name: "description",
           content: this.article.description
+        },
+        {
+          hid: "twitter:title",
+          name: "twitter:title",
+          content: this.article.title + " - César Gálvez"
+        },
+        {
+          hid: "twitter:description",
+          name: "twitter:description",
+          content: this.article.description
+        },
+        {
+          hid: "og:title",
+          name: "og:title",
+          content: this.article.title + " - César Gálvez"
+        },
+        {
+          hid: "og:description",
+          name: "og:description",
+          content: this.article.description
+        },
+        // {
+        //   hid: 'og:image',
+        //   property: 'og:image',
+        //   content: `https://res.cloudinary.com/de5xzoviz/image/upload/q_68/${this.doc.image}`,
+        // },
+        // {
+        //   hid: 'og:image:secure_url',
+        //   property: 'og:image',
+        //   content: `https://res.cloudinary.com/de5xzoviz/image/upload/q_68/${this.doc.image}`,
+        // },
+        {
+          hid: "og:image:alt",
+          property: "og:image:alt",
+          content: this.article.title
         }
       ],
       link: [
@@ -51,4 +95,9 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.tag {
+  padding: 0.35rem 0.5rem 0.35rem 0.5rem;
+  text-align: center;
+}
+</style>

@@ -2,7 +2,9 @@
 title: Configurar Firestore en Vue
 date: 20 Oct 2020
 description: Hoy veremos como configurar Firestore en nuestro proyecto Vue.
-tags: [Vue, Firebase]
+tags:
+  - Vue
+  - Firebase
 ---
 
 ## Preparación

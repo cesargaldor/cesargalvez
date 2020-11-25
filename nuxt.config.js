@@ -1,4 +1,4 @@
-import meta from "@/constants/meta.js";
+import meta from "./constants/meta.js";
 export default {
   // Target (https://go.nuxtjs.dev/config-target)
   target: "static",
