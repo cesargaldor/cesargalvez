@@ -4,7 +4,7 @@
       {{ article.title }}
     </h1>
     <div class="flex items-center justify-between">
-      <div class="flex items-center mt-1 text-sm text-copy-secondary">
+      <div class="flex items-center mt-2 text-sm text-copy-secondary">
         <img
           src="@/assets/img/meuser.jpg"
           class="w-6 rounded-full mr-2"

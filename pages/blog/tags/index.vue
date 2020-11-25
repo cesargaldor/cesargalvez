@@ -1,7 +1,7 @@
 <template>
   <div class="blog-contenedor mb-5">
     <h2 class="sm:text-4xl lg:text-5xl xl:text-5xl font-bold mb-3">Blog</h2>
-    <p class="text-copy-secondary sm:pr-1 lg:pr-2 text-justify">
+    <p class="text-copy-secondary sm:pr-1 lg:pr-2">
       En este blog quiero ir escribiendo cosas que me gustaría haber sabido
       cuando yo las aprendí. Seguro que hay gente que está en la misma situación
       en la que yo me encontraba y que encuentra útil este contenido.
@@ -14,11 +14,9 @@
         class="w-full px-2 py-3 truncate leading-5 text-sm placeholder-copy-input text-copy-input rounded-md focus:outline-none bg-background-secondary"
       /> -->
     </div>
-    <div>
-      <h3 class="sm:text-2xl lg:text-3xl xl:text-3xl font-bold">
-        Todos los posts
-      </h3>
-    </div>
+    <h3 class="sm:text-2xl lg:text-3xl xl:text-3xl font-bold">
+      Estas son todas las categorías
+    </h3>
     <nuxt-link
       :to="`/blog/` + article.slug"
       v-for="article in articles"
