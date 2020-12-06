@@ -60,6 +60,10 @@
   color: var(--text-copy-modal);
 }
 
+.nuxt-content strong {
+  color: var(--text-copy-modal);
+}
+
 @media (min-width: 350px) {
   .nuxt-content h1 {
     font-size: 2.25rem;

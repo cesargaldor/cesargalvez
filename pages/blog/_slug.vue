@@ -3,7 +3,7 @@
     <h1 class="font-bold sm:text-4xl lg:text-5xl xl:text-6xl">
       {{ article.title }}
     </h1>
-    <div class="flex items-center justify-between">
+    <div class="-mb-6 flex items-center justify-between">
       <div class="flex items-center mt-2 text-sm text-copy-secondary">
         <img
           src="@/assets/img/meuser.jpg"

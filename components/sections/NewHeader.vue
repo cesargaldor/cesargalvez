@@ -8,7 +8,7 @@
           <picture>
             <img
               class="sm:w-40 lg:w-56 xl:w-56 rounded-full"
-              src="@/assets/img/meuser.jpg"
+              src="https://res.cloudinary.com/dt0zd5vvj/image/upload/v1607286216/meuser_qbwwut.jpg"
               alt="profile-photo"
             />
           </picture>
