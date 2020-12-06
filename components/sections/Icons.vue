@@ -1,6 +1,7 @@
 <template>
   <div class="flex">
     <a
+      aria-label="Twitter"
       href="https://twitter.com/cesardev_"
       target="_blank"
       rel="noopener"
@@ -9,6 +10,7 @@
       <TwitterIcon />
     </a>
     <a
+      aria-label="Github"
       href="https://github.com/cesargaldor"
       target="_blank"
       rel="noopener"
@@ -16,7 +18,11 @@
     >
       <GithubIcon />
     </a>
-    <a href="mailto:cesargaldor@gmail.com" class="p-3 rounded-md">
+    <a
+      aria-label="Email"
+      href="mailto:cesargaldor@gmail.com"
+      class="p-3 rounded-md"
+    >
       <MailIcon />
     </a>
   </div>

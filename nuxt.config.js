@@ -5,7 +5,7 @@ export default {
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    title: "cesargalvez",
+    title: "César Gálvez",
     meta: meta,
     link: [
       { rel: "icon", type: "image/png", href: "/favicon.png" },
@@ -45,7 +45,7 @@ export default {
   gtm: {
     id: process.env.NUXT_ENV_GA_ID,
     enabled: true,
-    debug: true,
+    debug: false,
     layer: "dataLayer",
     variables: {},
     pageTracking: true,
