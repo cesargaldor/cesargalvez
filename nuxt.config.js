@@ -38,8 +38,27 @@ export default {
     // https://go.nuxtjs.dev/pwa
     "@nuxtjs/pwa",
     // https://go.nuxtjs.dev/content
-    "@nuxt/content"
+    "@nuxt/content",
+    "@nuxtjs/gtm"
   ],
+
+  gtm: {
+    id: process.env.NUXT_ENV_GA_ID,
+    enabled: true,
+    debug: true,
+    layer: "dataLayer",
+    variables: {},
+    pageTracking: true,
+    pageViewEventName: "nuxtRoute",
+    autoInit: true,
+    respectDoNotTrack: true,
+    scriptId: "gtm-script",
+    scriptDefer: false,
+    scriptURL: "https://www.googletagmanager.com/gtag/js",
+    noscript: true,
+    noscriptId: "gtm-noscript",
+    noscriptURL: "https://www.googletagmanager.com/ns.html"
+  },
 
   // Content module configuration (https://go.nuxtjs.dev/config-content)
   content: {},

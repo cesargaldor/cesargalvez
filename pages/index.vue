@@ -14,6 +14,9 @@ export default {
     return {
       title: "César Gálvez"
     };
+  },
+  data() {
+    return {};
   }
 };
 </script>
