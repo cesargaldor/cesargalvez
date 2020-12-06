@@ -28,7 +28,7 @@ a la pestaña de dominios de nuestro proyecto. Ahora, tenemos que pulsar en la p
 
 ## Configurar Namecheap
 
-Ahora que ya hemos configurado Vercel tenemos que configurar nuestro gestor de dominios, en mi caso como dije anteriormente, usaré Namecheap, aunque supongo que
+Ahora que ya hemos configurado Vercel tenemos que configurar nuestro gestor de dominios, en mi caso usaré Namecheap, aunque supongo que
 los demás serán muy parecidos en procedimiento.
 
 <strong> 1) </strong> Una vez que estés logeado en tu cuenta accede a tu lista de dominios. Busca el que quieres añadir a tu aplicación y selecciona la opción `Manage`.
@@ -39,6 +39,8 @@ los demás serán muy parecidos en procedimiento.
 anteriormente Vercel.
 
 ![addNameServers](https://res.cloudinary.com/dt0zd5vvj/image/upload/v1607285256/namecheap2_ozhj19.png)
+
+<br/>
 
 ## Conclusión
 
