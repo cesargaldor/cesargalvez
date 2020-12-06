@@ -37,7 +37,7 @@ export default {
   name: "Blog",
   head() {
     return {
-      title: `Posts de ${this.tag.name} - César Gálvez`
+      title: `Posts sobre ${this.tag.name} - César Gálvez`
     };
   },
 

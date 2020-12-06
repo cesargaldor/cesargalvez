@@ -5,7 +5,8 @@ module.exports = [
   {
     hid: "description",
     name: "description",
-    content: `Desarrollador Frontend en Sevilla amante de Vue. Bienvenido a mi portfolio y blog.`
+    content:
+      "Desarrollador web amante de Vue. Bienvenido a mi portfolio y blog."
   },
   {
     hid: "author",
@@ -56,16 +57,17 @@ module.exports = [
     property: "og:locale",
     content: "es_ES"
   },
-  //   {
-  //     hid: "og:title",
-  //     property: "og:title",
-  //     content: process.env.APP_TITLE
-  //   },
-  //   {
-  //     hid: "og:description",
-  //     property: "og:description",
-  //     content: process.env.APP_DESC
-  //   },
+  {
+    hid: "og:title",
+    property: "og:title",
+    content: "César Gálvez"
+  },
+  {
+    hid: "og:description",
+    property: "og:description",
+    content:
+      "Desarrollador web amante de Vue. Bienvenido a mi portfolio y blog."
+  },
   {
     hid: "og:site_name",
     property: "og:site_name",
@@ -84,12 +86,12 @@ module.exports = [
   {
     hid: "og:image:alt",
     property: "og:image:alt",
-    content: "César Gálvez - Desarrollador Frontend"
+    content: "César Gálvez - Desarrollador Web"
   },
   {
     hid: "og:image:type",
     property: "og:image:type",
-    content: "image/jpeg"
+    content: "image/png"
   }
   // {
   //   hid: 'google-site-verification',
