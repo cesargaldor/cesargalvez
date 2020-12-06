@@ -60,6 +60,11 @@ export default {
 </script>
 
 <style scoped>
+h2,
+h3 {
+  @apply tracking-tight;
+}
+
 @media (min-width: 350px) {
   .blog-contenedor {
     min-height: 67.85vh;

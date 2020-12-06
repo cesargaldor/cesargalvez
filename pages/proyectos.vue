@@ -1,0 +1,40 @@
+<template>
+  <div class="sm:pb-6 lg:pb-6 xl:pb-56">
+    <h2 class="sm:text-4xl lg:text-5xl xl:text-5xl font-bold mb-3 ">
+      Proyectos
+    </h2>
+    <div class="text-copy-secondary sm:pr-1 lg:pr-2">
+      <p class="">
+        Estos son algunos de los proyectos personales que he ido haciendo en mi
+        tiempo libre. Tengo algún otro más, muy tonto, y se puede ver en mi
+        <a href="https://github.com/cesargaldor">github</a> pero estos son de
+        los que más orgulloso me siento.
+      </p>
+      <br />
+      <p>
+        Por supuesto, el objetivo de la mayoría de estos proyectos no eran los
+        usuarios que pudieran usarlos, si no el ir aprendendiendo y
+        profundizando en las tecnologías que usaba.
+      </p>
+    </div>
+    <div><Projects /></div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "Proyectos",
+  head() {
+    return {
+      title: "Proyectos - César Gálvez"
+    };
+  }
+};
+</script>
+
+<style>
+h2,
+h3 {
+  @apply tracking-tight;
+}
+</style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="sm:pt-5 lg:pt-8">
+  <div class="sm:pt-5 lg:pt-1 pb-10">
     <h1 class="font-bold sm:text-4xl lg:text-5xl xl:text-6xl">
       {{ article.title }}
     </h1>
@@ -24,7 +24,7 @@
         </nuxt-link>
       </div>
     </div>
-    <article class="pt-12">
+    <article class="pt-12 -mb-3">
       <nuxt-content :document="article" />
     </article>
   </div>
@@ -99,5 +99,11 @@ export default {
 .tag {
   padding: 0.35rem 0.5rem 0.35rem 0.5rem;
   text-align: center;
+}
+
+@media (min-width: 350px) {
+  .tag {
+    font-size: 0.65rem;
+  }
 }
 </style>

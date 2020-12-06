@@ -1,8 +1,9 @@
 <template>
   <div>
-    <div><Header /></div>
-    <div><About /></div>
-    <div><Projects /></div>
+    <NewHeader />
+    <!--<div><Header /></div>-->
+    <!--<div><About /></div> -->
+    <!-- <div><Projects /></div> -->
   </div>
 </template>
 

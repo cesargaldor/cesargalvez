@@ -1,7 +1,7 @@
 <template>
-  <div class="blog-contenedor mb-5">
-    <h2 class="sm:text-4xl lg:text-5xl xl:text-5xl font-bold mb-3">Blog</h2>
-    <p class="text-copy-secondary sm:pr-1 lg:pr-2 text-justify">
+  <div class="blog-contenedor h-screen">
+    <h2 class="sm:text-4xl lg:text-5xl xl:text-5xl font-bold mb-3 ">Blog</h2>
+    <p class="text-copy-secondary sm:pr-1 lg:pr-2">
       En este blog quiero ir escribiendo cosas que me gustaría haber sabido
       cuando yo las aprendí. Seguro que hay gente que está en la misma situación
       en la que yo me encontraba y que encuentra útil este contenido.
@@ -16,13 +16,17 @@
     </div>
     <div>
       <h3
-        class="sm:text-2xl lg:text-3xl xl:text-3xl font-bold  sm:mb-0 lg:-mb-2"
+        class="sm:text-2xl lg:text-3xl xl:text-3xl font-bold sm:-mb-4 lg:-mb-3"
       >
         Todas las categorías
       </h3>
     </div>
     <ul class="mt-8">
-      <li v-for="tag in tags" :key="tag.name" class="pb-2 text-lg">
+      <li
+        v-for="tag in tags"
+        :key="tag.name"
+        class="pb-2 lg:text-base xl:text-lg"
+      >
         <nuxt-link :to="`/blog/categorias/` + tag.name">
           - {{ tag.name }}
         </nuxt-link>
@@ -66,7 +70,7 @@ h3 {
 
 @media (min-width: 350px) {
   .blog-contenedor {
-    min-height: 65vh;
+    min-height: 68vh;
   }
 }
 

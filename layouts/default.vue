@@ -1,6 +1,6 @@
 <template>
   <div
-    class="contenedor sm:w-full lg:w-full xl:w-full sm:px-5 lg:px-56 bg-background-primary text-copy-primary transicion"
+    class="contenedor sm:w-full lg:w-full xl:w-full sm:px-5 lg:px-64 bg-background-primary text-copy-primary transicion"
     :class="theme"
   >
     <div>
@@ -14,7 +14,8 @@
         </div>
         <div class="flex items-center">
           <div class="nav-items">
-            <nuxt-link to="/blog">blog</nuxt-link>
+            <nuxt-link class="pr-1" to="/proyectos">proyectos</nuxt-link>
+            <nuxt-link class="px-1" to="/blog">blog</nuxt-link>
           </div>
           <div class="nav-items">
             <ThemeSwitcher :theme="theme" @themeChanged="updateTheme" />
@@ -23,9 +24,9 @@
       </nav>
     </div>
     <Nuxt />
-    <div class="pt-20 pb-10">
+    <!-- <div class="pt-20 pb-10">
       <Foot />
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -67,8 +68,8 @@ export default {
 
 @media (min-width: 1920px) {
   .contenedor {
-    padding-left: 25rem;
-    padding-right: 25rem;
+    padding-left: 32rem;
+    padding-right: 32rem;
   }
 }
 

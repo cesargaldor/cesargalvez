@@ -1,6 +1,5 @@
 <template>
   <div class="mt-10">
-    <h2 class="text-2xl font-bold mb-6">Proyectos</h2>
     <a
       :href="project.url"
       target="_blank"
@@ -62,7 +61,7 @@ export default {
           name: "Peliculapps",
           description: `Biblioteca de películas hecha con Vue y usando también el ecosistema de Firebase. 
           Recoge la información de la API de TMDB y permite al usuario guardar las películas 
-          en listas de favoritos, vistas y pendientes`,
+          en listas de favoritos, vistas y pendientes.`,
           icon: "movie",
           url: "https://movies-28230.web.app/"
         }
