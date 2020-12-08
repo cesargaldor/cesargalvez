@@ -3,6 +3,10 @@ module.exports = [
   { name: "viewport", content: "width=device-width, initial-scale=1" },
   { name: "theme-color", content: "#54a0ff" },
   {
+    name: "google-site-verification",
+    content: "59MbMgpeZP_zZQwamSSJiNALFwOpBo_vsAY9dr8VMGU"
+  },
+  {
     hid: "description",
     name: "description",
     content:
