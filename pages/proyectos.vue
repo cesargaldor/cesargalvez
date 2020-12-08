@@ -26,7 +26,26 @@ export default {
   name: "Proyectos",
   head() {
     return {
-      title: "Proyectos - César Gálvez"
+      title: "Proyectos - César Gálvez",
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content:
+            "Estos son unos cuantos proyectos que he ido realizando en mi tiempo libre con el objetivo de seguir aprendiendo."
+        },
+        {
+          hid: "og:title",
+          name: "og:title",
+          content: "Proyectos - César Gálvez"
+        },
+        {
+          hid: "og:description",
+          name: "og:description",
+          content:
+            "Estos son unos cuantos proyectos que he ido realizando en mi tiempo libre con el objetivo de seguir aprendiendo."
+        }
+      ]
     };
   }
 };

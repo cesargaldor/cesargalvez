@@ -42,8 +42,36 @@ export default {
     "@nuxtjs/pwa",
     // https://go.nuxtjs.dev/content
     "@nuxt/content",
-    "@nuxtjs/gtm"
+    "@nuxtjs/gtm",
+    "@nuxtjs/sitemap"
   ],
+
+  /*
+   ** Sitemap Configuration
+   */
+  sitemap: {
+    path: "/sitemap.xml",
+    hostname: "https://cesargalvez.com",
+    cacheTime: 1000 * 60 * 15,
+    gzip: true,
+    generate: false,
+    routes: [
+      "/",
+      "/proyectos",
+      "/blog",
+      "/blog/como-anadir-un-dominio-a-vercel",
+      "/blog/configurar-firestore-en-vue",
+      "/categorias",
+      "/categorias/firebase",
+      "/categorias/vue",
+      "/categorias/web"
+    ].map(route => ({
+      url: route,
+      changefreq: "monthly",
+      priority: 1,
+      lastmodISO: new Date().toISOString().split("T")[0]
+    }))
+  },
 
   gtm: {
     id: process.env.NUXT_ENV_GA_ID,
