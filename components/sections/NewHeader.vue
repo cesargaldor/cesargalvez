@@ -1,13 +1,15 @@
 <template>
   <div>
     <section>
-      <div class="pt-2 w-full flex sm:flex-col lg:flex-row items-center">
+      <div
+        class="pt-2 w-full flex sm:flex-col lg:flex-row items-center xl:pt-16"
+      >
         <div
-          class="sm:w-full lg:w-2/5 xl:w-2/5 lg:pt-6 flex flex-col justify-center items-center"
+          class="sm:w-full lg:w-2/5 xl:w-2/5 lg:pt-6 xl:pt-16 lg:pr-8 xl:pr-12 flex flex-col justify-center items-center"
         >
           <picture>
             <img
-              class="sm:w-40 lg:w-56 xl:w-56 rounded-full"
+              class="sm:w-40 lg:w-56 xl:w-64 rounded-full"
               src="https://res.cloudinary.com/dt0zd5vvj/image/upload/v1607286216/meuser_qbwwut.jpg"
               alt="profile-photo"
             />
@@ -16,18 +18,18 @@
             <Icons />
           </div>
         </div>
-        <div class="sm:w-full lg:w-3/5 xl:w-3/5 pr-4 sm:pt-6">
-          <h3 class="sm:text-xl lg:text-2xl xl:text-4xl font-bold mb-3 ">
+        <div class="sm:w-full lg:w-3/5 xl:w-3/5 pr-4 sm:pt-6 xl:pt-16">
+          <h3 class="sm:text-xl lg:text-3xl xl:text-6xl font-bold mb-3 ">
             Hola, soy César.
           </h3>
-          <div class="text-copy-secondary">
+          <div class="text-copy-secondary xl:text-lg">
             <p>
               Soy de Sevilla y actualmente estoy terminando Ingeniería de
               Software.
             </p>
             <p>
               A lo largo de la carrera he ido descubriendo que lo que de verdad
-              me gusta es el desarrollo web.
+              me apasiona es el desarrollo web.
             </p>
             <p>
               Cuando tengo tiempo voy haciendo pequeños proyectos personales
