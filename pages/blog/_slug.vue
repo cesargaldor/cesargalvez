@@ -1,6 +1,6 @@
 <template>
-  <div class="sm:pt-5 lg:pt-1 pb-10">
-    <h1 class="font-bold sm:text-4xl lg:text-5xl xl:text-6xl">
+  <div class="lg:pt-1">
+    <h1 class="font-bold sm:text-3xl lg:text-5xl xl:text-6xl">
       {{ article.title }}
     </h1>
     <div class="-mb-6 flex items-center justify-between">
@@ -13,7 +13,7 @@
         <span class=" mr-1">César Galvez / </span>
         <span>{{ article.date }}</span>
       </div>
-      <div>
+      <div class="sm:hidden lg:block xl:block">
         <nuxt-link
           :to="`/blog/categorias/` + tag"
           v-for="tag in article.tags"
@@ -24,7 +24,10 @@
         </nuxt-link>
       </div>
     </div>
-    <article class="pt-12 -mb-3">
+    <div class="pt-12 pb-2">
+      <img :src="article.img" alt="article-cover" class="rounded-md" />
+    </div>
+    <article>
       <nuxt-content :document="article" />
     </article>
   </div>

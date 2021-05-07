@@ -1,5 +1,9 @@
 import meta from "./constants/meta.js";
 export default {
+  server: {
+    port: 3000, // default: 3000
+    host: "0.0.0.0" // default: localhost
+  },
   // Target (https://go.nuxtjs.dev/config-target)
   target: "static",
 
@@ -57,17 +61,17 @@ export default {
     generate: false,
     routes: [
       "/",
-      "/proyectos",
+      "/sobre-mi",
       "/blog",
       "/blog/como-anadir-un-dominio-a-vercel",
       "/blog/configurar-firestore-en-vue",
-      "/categorias",
-      "/categorias/firebase",
-      "/categorias/vue",
-      "/categorias/web"
+      "/blog/categorias",
+      "/blog/categorias/firebase",
+      "/blog/categorias/vue",
+      "/blog/categorias/web"
     ].map(route => ({
       url: route,
-      changefreq: "monthly",
+      changefreq: "weekly",
       priority: 1,
       lastmodISO: new Date().toISOString().split("T")[0]
     }))

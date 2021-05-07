@@ -1,9 +1,8 @@
 <template>
   <div>
     <NewHeader />
-    <!--<div><Header /></div>-->
-    <!--<div><About /></div> -->
-    <!-- <div><Projects /></div> -->
+    <LatestPost :articles="articles" />
+    <Projects />
   </div>
 </template>
 
@@ -17,6 +16,15 @@ export default {
   },
   data() {
     return {};
+  },
+  async asyncData({ $content, params }) {
+    const articles = await $content("articles", params.slug)
+      .sortBy("date", "asc")
+      .limit(2)
+      .fetch();
+    return {
+      articles
+    };
   }
 };
 </script>

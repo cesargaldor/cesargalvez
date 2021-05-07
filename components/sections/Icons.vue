@@ -2,7 +2,7 @@
   <div class="flex">
     <a
       aria-label="Twitter"
-      href="https://twitter.com/cesardev_"
+      href="https://twitter.com/cesargd_"
       target="_blank"
       rel="noopener"
       class="p-3 mr-2 rounded-md"
@@ -25,6 +25,13 @@
     >
       <MailIcon />
     </a>
+    <!-- <a
+      aria-label="Email"
+      href="mailto:cesargaldor@gmail.com"
+      class="p-3 rounded-md"
+    >
+      <LinkedinIcon />
+    </a> -->
   </div>
 </template>
 
@@ -34,7 +41,8 @@ export default {
   components: {
     TwitterIcon: () => import("@/assets/icons/twitter.svg?inline"),
     GithubIcon: () => import("@/assets/icons/github.svg?inline"),
-    MailIcon: () => import("@/assets/icons/mail.svg?inline")
+    MailIcon: () => import("@/assets/icons/mail.svg?inline"),
+    LinkedinIcon: () => import("@/assets/icons/linkedin.svg?inline")
   }
 };
 </script>

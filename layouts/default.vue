@@ -1,21 +1,20 @@
 <template>
   <div
-    class="contenedor sm:w-full lg:w-full xl:w-full sm:px-5 lg:px-64 bg-background-primary text-copy-primary transicion"
+    class="contenedor sm:w-full md:w-full lg:w-full xl:w-full sm:px-6 md:px-32 lg:px-48 bg-background-primary text-copy-primary transicion"
     :class="theme"
   >
     <div>
-      <nav class="flex items-center justify-between py-10">
+      <nav class="flex items-center justify-between py-8">
         <div>
-          <nuxt-link to="/" class="font-semibold"
+          <!-- <nuxt-link to="/" class="font-semibold"
             >cesar.<span class="text-copy-modal font-semibold"
               >galvez</span
             ></nuxt-link
-          >
+          > -->
         </div>
         <div class="flex items-center">
           <div class="nav-items">
-            <nuxt-link class="pr-1" to="/proyectos">proyectos</nuxt-link>
-            <nuxt-link class="px-1" to="/blog">blog</nuxt-link>
+            <nuxt-link class="px-1" to="/blog">Blog</nuxt-link>
           </div>
           <div class="nav-items">
             <ThemeSwitcher :theme="theme" @themeChanged="updateTheme" />
@@ -24,9 +23,9 @@
       </nav>
     </div>
     <Nuxt />
-    <!-- <div class="pt-20 pb-10">
+    <div class="sm:py-8 lg:py-16">
       <Foot />
-    </div> -->
+    </div>
   </div>
 </template>
 
@@ -68,16 +67,8 @@ export default {
 
 @media (min-width: 1920px) {
   .contenedor {
-    padding-left: 32rem;
-    padding-right: 32rem;
-  }
-}
-
-@media (min-width: 2500px) {
-  .contenedor {
-    padding-left: 45rem;
-    padding-right: 45rem;
-    min-height: 100vh;
+    padding-left: 30rem;
+    padding-right: 30rem;
   }
 }
 

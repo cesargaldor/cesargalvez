@@ -1,15 +1,10 @@
 module.exports = {
-  future: {
-    // removeDeprecatedGapUtilities: true,
-    // purgeLayersByDefault: true,
-  },
   theme: {
     screens: {
-      sm: "320px",
+      sm: "350px",
       md: "768px",
       lg: "1280px",
-      xl: "1920px",
-      "2xl": "2500px"
+      xl: "1920px"
     },
     colors: {
       black: "#000",
@@ -22,7 +17,8 @@ module.exports = {
       gray: {
         gray1: "#c8d6e5",
         gray2: "#8395a7",
-        gray3: "#56616d"
+        gray3: "#56616d",
+        gray4: "#4b5563"
       },
       background: {
         primary: "var(--bg-background-primary)",

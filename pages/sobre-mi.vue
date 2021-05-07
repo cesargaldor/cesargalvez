@@ -1,14 +1,11 @@
 <template>
   <div class="sm:pb-6 lg:pb-6 xl:pb-56">
     <h2 class="sm:text-4xl lg:text-5xl xl:text-5xl font-bold mb-3 ">
-      Proyectos
+      Sobre mí
     </h2>
-    <div class="text-copy-secondary sm:pr-1 lg:pr-2">
+    <div class="text-copy-secondary sm:pr-1">
       <p class="">
-        Estos son algunos de los proyectos personales que he ido haciendo en mi
-        tiempo libre. Tengo algún otro más, muy tonto, y se puede ver en mi
-        <a href="https://github.com/cesargaldor">github</a> pero estos son de
-        los que más orgulloso me siento.
+        Hola, soy César Gálvez.
       </p>
       <br />
       <p>
@@ -17,16 +14,15 @@
         profundizando en las tecnologías que usaba.
       </p>
     </div>
-    <div><Projects /></div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "Proyectos",
+  name: "About",
   head() {
     return {
-      title: "Proyectos - César Gálvez",
+      title: "Sobre mí - César Gálvez",
       meta: [
         {
           hid: "description",

@@ -1,38 +1,67 @@
 <template>
-  <div class="mb-6">
-    <div
-      class="w-full sm:flex sm:flex-col lg:flex lg:flex-row xl:flex xl:flex-row lg:items-center xl:items-center lg:justify-between xl:justify-between mb-2 sm:mt-3 lg:mt-8 xl:mt-10"
-    >
-      <div class="sm:w-full lg:w-12/12 xl:w-11/12">
-        <h4>
-          <span class="sm:text-lg lg:text-lg xl:text-xl font-semibold title">
-            {{ title }}
-          </span>
-        </h4>
-      </div>
+  <div>
+    <div class="card text-white relative">
       <div
-        class="sm:w-full sm:text-sm text-copy-secondary sm:mb-1 lg:mb-0 xl:mb-0 lg:w-2/12 lg:text-right xl:w-2/12"
+        class="img-holder pt-5 pl-5 w-full h-full bg-cover bg-center rounded-md"
+        :style="{ 'background-image': 'url(' + img + ')' }"
       >
-        {{ date }}
+        <div class="mb-3">
+          <span
+            class="tag bg-blue-dark mr-2 rounded px-2 py-1 uppercase text-xs"
+            v-for="tag in tags"
+            :key="tag"
+            >{{ tag }}</span
+          >
+        </div>
+        <div class="pr-32">
+          <h2 class="font-bold sm:text-xl lg:text-2xl xl:text-2xl ">
+            {{ title }}
+          </h2>
+        </div>
+        <div
+          class="absolute bottom-0 right-0 pb-5 pr-5 flex justify-end w-full"
+        >
+          <span class="uppercase text-xs">Leer más...</span>
+        </div>
       </div>
     </div>
-    <p
-      class="sm:text-sm lg:text-sm xl:text-base lg:pr-6 xl:pr-8 text-copy-secondary"
-    >
-      {{ description }}
-    </p>
   </div>
 </template>
 
 <script>
 export default {
   name: "Post",
-  props: ["title", "date", "description"]
+  props: ["title", "tags", "img"]
 };
 </script>
 
 <style scoped>
-.title:hover {
-  border-bottom: 1px solid var(--text-copy-primary);
+@media (min-width: 300px) {
+  .card {
+    height: 26vh;
+  }
+  .tag {
+    font-size: 0.6rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .card {
+    height: 35vh;
+  }
+}
+
+@media (min-width: 1920px) {
+  .card {
+    height: 28vh;
+  }
+}
+
+.img-holder {
+  transition: all 0.5s;
+}
+
+.img-holder:hover {
+  transform: scale(1.02);
 }
 </style>

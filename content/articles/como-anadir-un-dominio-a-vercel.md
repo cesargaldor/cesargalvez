@@ -4,6 +4,7 @@ date: 06 Dic 2020
 description: Vamos a aprender como añadir un dominio a nuestra aplicación en Vercel.
 tags:
   - Web
+img: https://res.cloudinary.com/dt0zd5vvj/image/upload/v1620340617/vercel_hixzr7.png
 ---
 
 Recientemente tuve que cambiar el dominio de mi página web porque el anterior, que era gratuito gracias al programa de [Github Education](https://education.github.com/) , expiró. Además ya que iba a cambiar, también decidí probar [Vercel](https://vercel.com/).
