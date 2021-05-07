@@ -1,16 +1,16 @@
 <template>
-  <div class="flex justify-between items-center text-copy-secondary">
-    <div></div>
-    <div class="flex items-center text-sm">
-      Hecho con <HeartIcon class="mx-1" /> en
-      <a
-        class="ml-1 hover:text-copy-modal"
-        href="https://www.visitasevilla.es/turismo-de-sevilla"
-      >
-        Sevilla.
-      </a>
+  <div class="text-copy-secondary border-t border-gray-gray1">
+    <div class="pt-5 pb-5">
+      <Spotify />
     </div>
-    <div></div>
+    <div class="flex justify-between items-end text-sm">
+      <div class="flex flex-col">
+        <nuxt-link class="py-1" to="/">Inicio</nuxt-link>
+        <nuxt-link class="py-1" to="/blog">Blog</nuxt-link>
+        <nuxt-link class="py-1" to="/sobre-mi">Sobre mí</nuxt-link>
+      </div>
+      <div>&copy; César Gálvez</div>
+    </div>
   </div>
 </template>
 

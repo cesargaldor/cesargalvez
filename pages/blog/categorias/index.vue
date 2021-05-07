@@ -1,19 +1,6 @@
 <template>
   <div class="blog-contenedor h-screen">
     <h2 class="sm:text-4xl lg:text-5xl xl:text-5xl font-bold mb-3 ">Blog</h2>
-    <p class="text-copy-secondary sm:pr-1 lg:pr-2">
-      En este blog quiero ir escribiendo cosas que me gustaría haber sabido
-      cuando yo las aprendí. Seguro que hay gente que está en la misma situación
-      en la que yo me encontraba y que encuentra útil este contenido.
-    </p>
-    <div class="mt-6 sm:mb-10 lg:mb-12">
-      <!-- <input
-        v-model="searchQuery"
-        autocomplete="off"
-        placeholder="Busca artículos"
-        class="w-full px-2 py-3 truncate leading-5 text-sm placeholder-copy-input text-copy-input rounded-md focus:outline-none bg-background-secondary"
-      /> -->
-    </div>
     <div>
       <h3
         class="sm:text-2xl lg:text-3xl xl:text-3xl font-bold sm:-mb-4 lg:-mb-3"

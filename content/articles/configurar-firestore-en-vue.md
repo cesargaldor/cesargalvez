@@ -5,6 +5,7 @@ description: Hoy veremos como configurar Firestore en nuestro proyecto Vue.
 tags:
   - Vue
   - Firebase
+img: https://res.cloudinary.com/dt0zd5vvj/image/upload/v1620340978/bb_sqy9o1.jpg
 ---
 
 ## Preparación

@@ -9,8 +9,7 @@ module.exports = [
   {
     hid: "description",
     name: "description",
-    content:
-      "Desarrollador web amante de Vue. Bienvenido a mi portfolio y blog."
+    content: "Ingeniero de software apasionado por la tecnología y las motos."
   },
   {
     hid: "author",
@@ -24,7 +23,7 @@ module.exports = [
   {
     hid: "twitter:creator",
     name: "twitter:creator",
-    content: "@cesardev_"
+    content: "@cesargd_"
   },
   {
     hid: "twitter:domain",
@@ -34,18 +33,8 @@ module.exports = [
   {
     hid: "twitter:site",
     name: "twitter:site",
-    content: "@cesardev_"
+    content: "@cesargd_"
   },
-  //   {
-  //     hid: "twitter:title",
-  //     name: "twitter:title",
-  //     content: process.env.APP_TITLE
-  //   },
-  //   {
-  //     hid: "twitter:description",
-  //     name: "twitter:description",
-  //     content: process.env.APP_DESC
-  //   },
   {
     hid: "og:url",
     property: "og:url",
@@ -69,8 +58,7 @@ module.exports = [
   {
     hid: "og:description",
     property: "og:description",
-    content:
-      "Desarrollador web amante de Vue. Bienvenido a mi portfolio y blog."
+    content: "Ingeniero de software apasionado por la tecnología y las motos."
   },
   {
     hid: "og:site_name",
@@ -90,16 +78,11 @@ module.exports = [
   {
     hid: "og:image:alt",
     property: "og:image:alt",
-    content: "César Gálvez - Desarrollador Web"
+    content: "César Gálvez"
   },
   {
     hid: "og:image:type",
     property: "og:image:type",
     content: "image/png"
   }
-  // {
-  //   hid: 'google-site-verification',
-  //   name: 'google-site-verification',
-  //   content: '',
-  // },
 ];

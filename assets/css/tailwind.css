@@ -7,7 +7,7 @@
   --bg-background-secondary: #f5f6fa;
 
   --text-copy-primary: #000;
-  --text-copy-secondary: #404042;
+  --text-copy-secondary: #4b5563;
   --text-copy-terciary: #a1a3a8;
   --text-copy-modal: #54a0ff;
   --text-copy-code: #f0f6ff;
@@ -16,8 +16,8 @@
 }
 
 .theme-dark {
-  --bg-background-primary: #161b25;
-  --bg-background-secondary: #242c3b;
+  --bg-background-primary: #0f1218;
+  --bg-background-secondary: #1d232e;
 
   --text-copy-primary: #fff;
   --text-copy-secondary: #c4c6ca;
