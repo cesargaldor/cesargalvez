@@ -1,18 +1,21 @@
 <template>
-  <div class="sm:pb-6 lg:pb-6 xl:pb-56">
-    <h2 class="sm:text-4xl lg:text-5xl xl:text-5xl font-bold mb-3 ">
+  <div class="sm:pb-6 lg:pb-6 xl:pb-40">
+    <h2 class="sm:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6">
       Sobre mí
     </h2>
     <div class="text-copy-secondary sm:pr-1">
-      <p class="">
+      <div>
+        <img
+          class="w-64 rounded-full"
+          src="https://res.cloudinary.com/dt0zd5vvj/image/upload/v1607286216/meuser_qbwwut.jpg"
+          alt="yo"
+        />
+      </div>
+      <p class="mt-6">
         Hola, soy César Gálvez.
       </p>
+      <p></p>
       <br />
-      <p>
-        Por supuesto, el objetivo de la mayoría de estos proyectos no eran los
-        usuarios que pudieran usarlos, si no el ir aprendendiendo y
-        profundizando en las tecnologías que usaba.
-      </p>
     </div>
   </div>
 </template>
@@ -22,26 +25,7 @@ export default {
   name: "About",
   head() {
     return {
-      title: "Sobre mí - César Gálvez",
-      meta: [
-        {
-          hid: "description",
-          name: "description",
-          content:
-            "Estos son unos cuantos proyectos que he ido realizando en mi tiempo libre con el objetivo de seguir aprendiendo."
-        },
-        {
-          hid: "og:title",
-          name: "og:title",
-          content: "Proyectos - César Gálvez"
-        },
-        {
-          hid: "og:description",
-          name: "og:description",
-          content:
-            "Estos son unos cuantos proyectos que he ido realizando en mi tiempo libre con el objetivo de seguir aprendiendo."
-        }
-      ]
+      title: "Sobre mí - César Gálvez"
     };
   }
 };
