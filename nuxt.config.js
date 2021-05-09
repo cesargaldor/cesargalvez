@@ -1,9 +1,9 @@
-import meta from "./constants/meta.js";
+//import meta from "./constants/meta.js";
 export default {
-  server: {
-    port: 3000, // default: 3000
-    host: "0.0.0.0" // default: localhost
-  },
+  // server: {
+  //   port: 3000, // default: 3000
+  //   host: "0.0.0.0" // default: localhost
+  // },
   // Target (https://go.nuxtjs.dev/config-target)
   target: "static",
 
@@ -13,7 +13,96 @@ export default {
       lang: "es"
     },
     title: "César Gálvez",
-    meta: meta,
+    meta: [
+      { charset: "utf-8" },
+      {
+        hid: "description",
+        name: "description",
+        content:
+          "Ingeniero de software apasionado por la tecnología y las motos."
+      },
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { name: "theme-color", content: "#54a0ff" },
+      {
+        name: "google-site-verification",
+        content: "59MbMgpeZP_zZQwamSSJiNALFwOpBo_vsAY9dr8VMGU"
+      },
+      {
+        hid: "author",
+        author: "César Gálvez"
+      },
+      {
+        hid: "twitter:card",
+        name: "twitter:card",
+        content: "summary_large_image"
+      },
+      {
+        hid: "twitter:creator",
+        name: "twitter:creator",
+        content: "@cesargd_"
+      },
+      {
+        hid: "twitter:domain",
+        name: "twitter:domain",
+        content: "cesargalvez.com"
+      },
+      {
+        hid: "twitter:site",
+        name: "twitter:site",
+        content: "@cesargd_"
+      },
+      {
+        hid: "og:url",
+        property: "og:url",
+        content: "https://cesargalvez.com"
+      },
+      {
+        hid: "og:type",
+        property: "og:type",
+        content: "website"
+      },
+      {
+        hid: "og:locale",
+        property: "og:locale",
+        content: "es_ES"
+      },
+      {
+        hid: "og:title",
+        property: "og:title",
+        content: "César Gálvez"
+      },
+      {
+        hid: "og:description",
+        property: "og:description",
+        content:
+          "Ingeniero de software apasionado por la tecnología y las motos."
+      },
+      {
+        hid: "og:site_name",
+        property: "og:site_name",
+        content: "cesargalvez.com"
+      },
+      {
+        hid: "og:image",
+        property: "og:image",
+        content: ""
+      },
+      {
+        hid: "og:image:secure_url",
+        property: "og:image",
+        content: ""
+      },
+      {
+        hid: "og:image:alt",
+        property: "og:image:alt",
+        content: "César Gálvez"
+      }
+      // {
+      //   hid: "og:image:type",
+      //   property: "og:image:type",
+      //   content: "image/png"
+      // }
+    ],
     link: [
       { rel: "icon", type: "image/png", href: "/favicon.png" },
       {
@@ -22,6 +111,18 @@ export default {
           "https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap"
       }
     ]
+  },
+
+  generate: {
+    async routes() {
+      const { $content } = require("@nuxt/content");
+      const dynamicRoutes = await $content("articles")
+        .only(["slug"])
+        .fetch();
+      return dynamicRoutes.map(myRoute =>
+        myRoute.slug === "/index" ? "/" : `/blog/${myRoute.slug}`
+      );
+    }
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
