@@ -3,7 +3,7 @@ title: Como añadir un dominio a Vercel
 date: 06 Dic 2020
 description: Vamos a aprender como añadir un dominio a nuestra aplicación en Vercel.
 tags:
-  - Web
+  - web
 img: https://res.cloudinary.com/dt0zd5vvj/image/upload/v1620340617/vercel_hixzr7.png
 ---
 

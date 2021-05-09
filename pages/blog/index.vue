@@ -1,8 +1,10 @@
 <template>
   <div class="blog-contenedor">
-    <h2 class="sm:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6">
-      Blog
-    </h2>
+    <div class="flex items-center justify-between mb-6">
+      <h2 class="sm:text-4xl lg:text-5xl xl:text-6xl font-bold">
+        Blog
+      </h2>
+    </div>
     <div class="grid gap-4 sm:grid-cols-1 lg:grid-cols-2 relative">
       <nuxt-link
         :to="`/blog/` + article.slug"

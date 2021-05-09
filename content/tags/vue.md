@@ -1,3 +1,3 @@
 ---
-name: Vue
+name: vue
 ---

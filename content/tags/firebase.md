@@ -1,3 +1,3 @@
 ---
-name: Firebase
+name: firebase
 ---
